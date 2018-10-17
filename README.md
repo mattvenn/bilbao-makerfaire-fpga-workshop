@@ -52,10 +52,57 @@ Solution: Examples -> LED -> counter
 
 ### LED sequencing
 
-In the Bilbao colleciton, use the Counter -> 8bit compare block to make a sequence of LEDs.
+In the Bilbao collection, use the Counter -> 8bit compare block to make a sequence of LEDs.
 
 LED 1 flashes 3 times, LED 2 turns on. LED 1 flashes 3 times, LED 2 turns off.
 
 Solution: Examples -> LED -> led sequence
 
-### VGA
+### red VGA
+
+Load Examples -> VGA -> red
+
+Upload onto the board and check the display shows a red screen.
+
+The AND gates are used so that the red, green and blue outputs are only on when the active video signal is true.
+
+Modify the 1s and 0s to change the colour to green and blue
+
+### colour control
+
+Instead of using the 1s and 0s to change the colours, use the 3 buttons.
+
+Solution: Examples -> VGA -> buttons
+
+### split colours
+
+Make the bottom half of the screen blue.
+
+In the Bilbao collection, use the Counter -> 10bit compare block to compare the y_px output of the VGA block with a parameter.
+Use the more output of the compare block to drive the AND gate of the blue signal.
+
+Solution: Examples -> VGA -> half blue
+
+#### Advanced
+
+* split the screen up in different ways
+* use the x_px output of the VGA to do vertical splits
+
+### colour sequence
+
+* Use the PrescalarN and 8bit compare blocks to change the colours on the screen in a sequence.
+* Use the px_clk output from the VGA block as the input to the PrescalarN block.
+
+Solution: Examples -> VGA -> sequence
+
+#### Advanced
+
+* Use multiple compare blocks to animate different colours
+* Split the outputs to get more colour control
+
+### cross
+
+* use a few 10bit compare blocks to draw a cross on the screen
+
+Solution: Examples -> VGA -> cross
+
