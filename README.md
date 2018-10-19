@@ -9,7 +9,7 @@ Soon to be available on [CrowdSupply](https://www.crowdsupply.com/1bitsquared/ic
 ## Setup
 
 * Install [IceStudio](https://github.com/FPGAwars/icestudio#installation)
-* Install the [workshop package](https://github.com/mattvenn/collection-bilbao-makerfaire-2018/archive/0.1.zip)
+* Install the [workshop package](https://github.com/mattvenn/collection-bilbao-makerfaire-2018/archive/master.zip)
 
 ## Challenges
 
