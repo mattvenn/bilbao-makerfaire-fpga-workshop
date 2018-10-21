@@ -1,12 +1,17 @@
 # Bilbao Maker Faire October 2018 FPGA beginner's workshop 
+
 Shortlink to this documentation: [http://bit.ly/bbmf-fpga](http://bit.ly/bbmf-fpga). Viewing the documentation online allows you to click links more easily!
 
-Using the [IceBreaker board](https://github.com/icebreaker-fpga/icebreaker)
+[Presentation](presentation.odp)
+
+## Materials
+
+Workshop uses the [IceBreaker board](https://github.com/icebreaker-fpga/icebreaker)
 Soon to be available on [CrowdSupply](https://www.crowdsupply.com/1bitsquared/icebreaker-fpga)
 
 ![pinout](images/icebreaker-v1-0a-legend.jpg)
 
-## Setup
+## Software Setup
 
 * Install [Icestudio](https://github.com/FPGAwars/icestudio#installation)
 * Install the [workshop package](https://github.com/mattvenn/collection-bilbao-makerfaire-2018/archive/master.zip)
@@ -15,10 +20,9 @@ Soon to be available on [CrowdSupply](https://www.crowdsupply.com/1bitsquared/ic
 
 [Installing and changing collections in Icestudio](https://github.com/Obijuan/digital-electronics-with-open-FPGAs-tutorial/wiki/Video-5:-Colecciones-en-Icestudio#instalaci%C3%B3n)
 
+# Challenges
 
-## Challenges
-
-### LEDS on
+## LEDS on
 
 connect the boards LEDs to the 1 and 0 bits.
 
@@ -26,13 +30,13 @@ Solution: -> LEDS -> simple
 
 Use more blocks to turn on other LEDs on the board.
 
-### Buttons
+## Buttons
 
 Instead of using a 1 or 0 bit block, use a button to turn on and off an LED
 
 In the default collection, add a logic -> gate -> not to invert the button.
 
-### LEDs blinking
+## LEDs blinking
 
 Add a clock input by adding a basic -> input block and setting it's name and input to CLK.
 Attach the clk to an LED. Is the LED blinking?
@@ -40,7 +44,7 @@ Attach the clk to an LED. Is the LED blinking?
 To slow the clock down, add a logic -> sequential -> Prescalar22 from the default collection.
 The Prescalar22 block needs to go between the clk input and the LED output.
 
-### Button combo
+## Button combo
 
 Use a combination of buttons to light LED
 
@@ -54,7 +58,7 @@ Try other logic combinations, for example:
 * LED on when button1 AND button2 AND button3
 * LED on when (button1 AND button2) OR button3 
 
-### All LEDs blinking at different rates
+## All LEDs blinking at different rates
 
 Using the Bilbao collection, load Examples -> LED -> different rates.
 
@@ -64,7 +68,7 @@ Using the Bilbao collection, load Examples -> LED -> different rates.
 Add more Counter -> 8bit compare blocks to make all the LEDs flash at different rates.
 Try setting them to 50, 49, 48, 47 and 46.
 
-### LEDs counting
+## LEDs counting
 
 Load the Examples -> LED -> counter.
 
@@ -100,7 +104,7 @@ Advanced: Make the counter count backwards.
 * make a change to the verilog to count down instead of up
 * drag and drop the new module over the old to replace it while keeping the connections
 
-### red VGA
+## red VGA
 
 Load Examples -> VGA -> red
 
@@ -110,13 +114,13 @@ The AND gates are used so that the red, green and blue outputs are only on when 
 
 Modify the 1s and 0s to change the colour on the screen.
 
-### colour control
+## colour control
 
 Instead of using the 1s and 0s to change the colours, use the 3 buttons.
 
 Solution: Examples -> VGA -> buttons
 
-### split colours
+## split colours
 
 Make the bottom half of the screen blue.
 
@@ -126,7 +130,7 @@ Use the *more* output of the compare block to drive the AND gate of the blue sig
 
 Solution: Examples -> VGA -> half blue
 
-#### Advanced
+### Advanced
 
 * use the equal output of the 10bit compare block to show lines
 * use the x_px output of the VGA to do vertical splits
@@ -134,7 +138,7 @@ Solution: Examples -> VGA -> half blue
 	* Solution: Examples -> VGA -> cross
 * use other logic gates to change the colours depending on the split
 
-### adjustable wipe
+## adjustable wipe
 
 Load Examples -> VGA -> adjustable wipe 
 
