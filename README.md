@@ -70,6 +70,11 @@ Load the Examples -> LED -> counter.
 
 This counts from 0 to 15 on the LEDs.
 
+Decimal	| Binary
+------- | ------
+0	| 0000
+1	| 0001
+
 Try removing the clock and using a button to increase the counter.
 
 Advanced: Make the counter count backwards.
