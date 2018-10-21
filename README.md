@@ -109,26 +109,23 @@ Solution: Examples -> VGA -> half blue
 
 #### Advanced
 
-* split the screen up in different ways
+* use the equal output of the 10bit compare block to show lines
 * use the x_px output of the VGA to do vertical splits
+* use 2 10bit compare blocks to draw a cross on the screen
+	* Solution: Examples -> VGA -> cross
+* use other logic gates to change the colours depending on the split
 
-### colour sequence
+### adjustable wipe
 
-* Use the PrescalarN and 8bit compare blocks to change the colours on the screen in a sequence.
-* Use the px_clk output from the VGA block as the input to the PrescalarN block.
+Load Examples -> VGA -> adjustable wipe 
 
-Solution: Examples -> VGA -> sequence
+Use buttons 1 and 3 to move the horizontal split up and down.
 
-#### Advanced
+Try:
 
-* Use multiple compare blocks to animate different colours
-* Split the outputs to get more colour control
-
-### cross
-
-* use a few 10bit compare blocks to draw a cross on the screen
-
-Solution: Examples -> VGA -> cross
+* change the colours on each side
+* change it to a vertical wipe
+* copy the counter and comparision blocks to make an adjustable vertical AND horizontal wipe.
 
 # Resources
 
