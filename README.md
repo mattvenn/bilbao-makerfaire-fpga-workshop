@@ -26,7 +26,7 @@ Soon to be available on [CrowdSupply](https://www.crowdsupply.com/1bitsquared/ic
 
 connect the boards LEDs to the 1 and 0 bits.
 
-Solution: -> LEDS -> simple
+Solution: examples -> LEDS -> simple
 
 Use more blocks to turn on other LEDs on the board.
 
@@ -39,7 +39,8 @@ In the default collection, add a logic -> gate -> not to invert the button.
 ## LEDs blinking
 
 Add a clock input by adding a basic -> input block and setting it's name and input to CLK.
-Attach the clk to an LED. Is the LED blinking?
+Attach the clk to an LED. Is the LED blinking? Maybe it's too fast! The clock is 12 million
+times per second!
 
 To slow the clock down, add a logic -> sequential -> Prescalar22 from the default collection.
 The Prescalar22 block needs to go between the clk input and the LED output.
@@ -58,7 +59,7 @@ Try other logic combinations, for example:
 * LED on when button1 AND button2 AND button3
 * LED on when (button1 AND button2) OR button3 
 
-## All LEDs blinking at different rates
+## LEDs blinking at different rates
 
 Using the Bilbao collection, load Examples -> LED -> different rates.
 
@@ -95,15 +96,6 @@ Decimal	| Binary
 
 Try removing the clock and using a button to increase the counter.
 
-Advanced: Make the counter count backwards.
-
-* Create a new Basic -> Code
-* input ports: clk
-* output ports: count[3:0]
-* copy the verilog from the 4bit counter block into your new block
-* make a change to the verilog to count down instead of up
-* drag and drop the new module over the old to replace it while keeping the connections
-
 ## red VGA
 
 Load Examples -> VGA -> red
@@ -138,7 +130,7 @@ Solution: Examples -> VGA -> half blue
 	* Solution: Examples -> VGA -> cross
 * use other logic gates to change the colours depending on the split
 
-## adjustable wipe
+## Adjustable Wipe
 
 Load Examples -> VGA -> adjustable wipe 
 
@@ -150,7 +142,7 @@ Try:
 * change it to a vertical wipe
 * copy the counter and comparision blocks to make an adjustable vertical AND horizontal wipe.
 
-# Resources
+# Further Resources
 
 * [Obijuan's digital electronics tutorial - in Spanish](https://github.com/Obijuan/digital-electronics-with-open-FPGAs-tutorial/wiki)
 * [Obijuan's verilog tutorial - in Spanish](https://github.com/Obijuan/open-fpga-verilog-tutorial/wiki)
